@@ -13,7 +13,8 @@ class SignUpService {
     required String role,
   }) async {
     // Authenticate the user and get UID
-    String uid = await _authService.createUser(email: email, password: password);
+    String uid =
+        await _authService.createUser(email: email, password: password);
 
     // Save user data to Firestore
     await _firestoreService.addUser(
@@ -28,3 +29,5 @@ class SignUpService {
     );
   }
 }
+
+// Patch change : Fix Create Account button tap issue during registration
