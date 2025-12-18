@@ -21,6 +21,7 @@ class FirestoreService {
   }
 }
 
+// Made changes to user profile data schema
 Future<Map<String, dynamic>> getUserData(String uid) async {
     DocumentSnapshot<Map<String, dynamic>> snapshot =
         await _firestore.collection('users').doc(uid).get();
